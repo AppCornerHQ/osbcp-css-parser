@@ -1,3 +1,27 @@
+About this fork
+========================================
+
+This fork is designed to restore compatibility for legacy projects relying on the original library, following the recent JCenter shutdown.
+
+Binaries for this fork are not published anywhere. Please use JitPack instead: https://jitpack.io/#AppCornerHQ/osbcp-css-parser
+
+For HtmlSpanner, the following versions are known to work together:
+
+```
+repositories {
+  maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+  implementation('com.github.leo0263:HtmlSpanner:0.7.2') {
+    exclude group: 'com.osbcp', module: 'cssparser'
+  }
+  implementation 'com.github.AppCornerHQ:osbcp-css-parser:1.8.0'
+  implementation 'net.sourceforge.htmlcleaner:htmlcleaner:2.2'
+}
+```
+
+
 OSBCP CSS Parser
 ========================================
 
